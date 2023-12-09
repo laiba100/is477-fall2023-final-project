@@ -1,0 +1,37 @@
+digraph G {
+rankdir=TB
+fontname=Courier; fontsize=18; labelloc=t
+
+node [shape=box style="filled, rounded", fillcolor = "#FFFFD1"]
+"data/wine/wine.data"
+"profiling/report.html"
+"profiling/report.html"
+"results/classification_report.txt"
+"results/wine_data_summary_statistics.csv"
+""
+"data/wine/wine.data"
+"results/wine_data_summary_statistics.csv"
+"results/classification_report.txt"
+"results/wine_data_analysis_histogram.png"
+"data/wine/wine.data"
+
+node [shape=box3d style="filled, rounded", fillcolor = "#D6FDD0"]
+"reproduce"
+"profile"
+"analyze"
+"prepare"
+
+edge [color = black]
+"data/wine/wine.data" -> "profile"
+"profiling/report.html" -> "reproduce"
+"results/classification_report.txt" -> "reproduce"
+"results/wine_data_summary_statistics.csv" -> "reproduce"
+"" -> "reproduce"
+"data/wine/wine.data" -> "analyze"
+"profile" -> "profiling/report.html"
+"analyze" -> "results/wine_data_summary_statistics.csv"
+"analyze" -> "results/classification_report.txt"
+"analyze" -> "results/wine_data_analysis_histogram.png"
+"prepare" -> "data/wine/wine.data"
+
+}

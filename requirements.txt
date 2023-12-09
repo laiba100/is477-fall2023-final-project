@@ -1,0 +1,10 @@
+pandas
+os
+ydata_profiling 
+requests
+hashlib
+zipfile
+matplotlib.pyplot 
+scikit-learn
+snakemake
+numpy
